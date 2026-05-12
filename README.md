@@ -2,6 +2,10 @@
 
 A tiny one-page site for a home sourdough bakery in San Francisco. Pre-order a few loaves each day, pickup or $1 SF delivery.
 
+**Live at:** <https://madewithlovebyraf.com>
+**Repo:** <https://github.com/rafnicholson/made-with-love-by-raf>
+**Hosted on:** Cloudflare Workers (free), auto-deploys on every push to `main`.
+
 ## Files (only 4 you'll ever touch)
 
 | File | What it is |
@@ -15,13 +19,13 @@ A tiny one-page site for a home sourdough bakery in San Francisco. Pre-order a f
 
 ## Daily routine (60 seconds)
 
-1. Open `menu.js` in any text editor.
+1. Open `menu.js` (locally in an editor, or on github.com from your phone).
 2. Update `date` (e.g. `"Wednesday, May 13"`).
 3. Update the three loaves' names / descriptions / prices.
 4. Paste in each loaf's Stripe Payment Link as `stripeUrl`.
-5. Save. Refresh the site. Done.
+5. Save → commit → push. Cloudflare auto-deploys in ~30 seconds. Hard-refresh the live site to see it.
 
-When a loaf sells out during the day, flip its `soldOut: false` to `soldOut: true` and save.
+When a loaf sells out during the day, flip its `soldOut: false` to `soldOut: true`, commit, and push. (From your phone: edit on github.com → "Commit changes" → done.)
 
 ## Preview locally
 
@@ -46,17 +50,21 @@ For each loaf:
 
 For $1 SF delivery: easiest to handle out-of-band — the success page / your follow-up text confirms whether they want pickup or delivery and you collect the $1 via Venmo / a separate $1 Stripe link. Later you can fold it into a single link with a shipping option.
 
-## Deploying (free, ~5 minutes)
+## Deploying
 
-**Easiest — Netlify Drop**: go to <https://app.netlify.com/drop>, drag this folder onto the page. You get a `something-something-1234.netlify.app` URL instantly. Drop the folder again to update.
+Already deployed. Here's how it's wired so future-you remembers:
 
-**Better long-term — Cloudflare Pages + GitHub**:
+- **Hosting:** Cloudflare Worker, connected to this GitHub repo. Every push to `main` triggers an auto-deploy (~30s).
+- **Domain:** `madewithlovebyraf.com` registered through Cloudflare Registrar (~$10/year).
+- **Custom domains** are configured under the Worker → Settings → Domains & Routes: both apex (`madewithlovebyraf.com`) and `www.madewithlovebyraf.com` point at the Worker.
+- **Build command:** none. **Output directory:** repo root. Pure static HTML/CSS/JS.
 
-1. Create a new GitHub repo, push this folder to it.
-2. Go to [Cloudflare Pages](https://pages.cloudflare.com/), connect the repo, deploy (no build command, root directory `/`).
-3. Now you can edit `menu.js` on github.com from your phone, and the site auto-updates in ~30 seconds.
+If you ever need to redeploy manually, just push an empty commit:
 
-Either way, point a custom domain at it once you're ready.
+```bash
+git commit --allow-empty -m "redeploy"
+git push
+```
 
 ## Notes
 
