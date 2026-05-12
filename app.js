@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("pickup-window").textContent = menu.pickupWindow || "";
 
   const leadtimeEl = document.getElementById("leadtime");
-  if (menu.orderBy && menu.orderBy.trim()) {
+  if (menu.leadtime && menu.leadtime.trim()) {
+    leadtimeEl.textContent = menu.leadtime;
+    leadtimeEl.hidden = false;
+  } else if (menu.orderBy && menu.orderBy.trim()) {
     leadtimeEl.textContent = `Long-fermented for 24–36 hours · Order by ${menu.orderBy}`;
     leadtimeEl.hidden = false;
   }

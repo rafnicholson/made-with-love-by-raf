@@ -16,11 +16,16 @@
 // - `stripeUrl` is the Stripe Payment Link for that loaf.
 //   (See README.md → "Wiring Stripe" for how to create them.)
 // - You can have 1, 2, or 3 loaves visible. Keep it simple.
+// - `leadtime`: optional full-sentence override for the line under the
+//   header. If set, it replaces the default "Long-fermented for 24–36
+//   hours · Order by ___" sentence. Use for coming-soon / holidays /
+//   anything off the normal cycle.
 //
 window.MENU = {
-  bakeDate: "Thursday, May 14",
+  bakeDate: "Coming Soon",
   orderBy: "Tuesday, May 12 at 8 PM",
-  pickupWindow: "Pickup after 12 PM",
+  pickupWindow: "",
+  leadtime: "Still proofing the website — first bake date dropping soon, stay tuned.",
   note: "", // Optional message at the top, e.g. "First bake of the week!"
 
   loaves: [
