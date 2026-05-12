@@ -25,6 +25,7 @@ window.MENU = {
       image: "images/coverphoto.png", // Replace with a per-loaf photo when you have one
       stripeUrl: "https://buy.stripe.com/aFacMY36YcvV2FX3QcbjW00",
       soldOut: false,
+      hidden: false,
     },
     {
       name: "Jalapeño Cheddar",
@@ -34,6 +35,7 @@ window.MENU = {
       image: "images/coverphoto.png",
       stripeUrl: "https://buy.stripe.com/REPLACE_ME_JALAPENO",
       soldOut: false,
+      hidden: true,
     },
     {
       name: "Rosemary Parmesan",
@@ -43,6 +45,7 @@ window.MENU = {
       image: "images/coverphoto.png",
       stripeUrl: "https://buy.stripe.com/REPLACE_ME_ROSEMARY",
       soldOut: false,
+      hidden: true,
     },
   ],
 };
