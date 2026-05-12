@@ -40,9 +40,9 @@ window.MENU = {
         "Sharp aged cheddar folded into the dough with fresh jalapeño. Spicy, melty, very make-a-sandwich-able.",
       price: "$10",
       image: "images/coverphoto.png",
-      stripeUrl: "https://buy.stripe.com/REPLACE_ME_JALAPENO",
+      stripeUrl: "https://buy.stripe.com/eVq7sE4b2gMb80hcmIbjW01",
       soldOut: false,
-      hidden: true,
+      hidden: false,
     },
     {
       name: "Rosemary Parmesan",
