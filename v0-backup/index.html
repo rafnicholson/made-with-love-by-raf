@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raf's Artisanal Sourdough Bread</title>
+    <link rel="stylesheet" href="/Users/Raf/Made with Love by Raf/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="cart">
+            <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="home">
+        <section class="banner">
+            <!-- Banner image will be set as a background in CSS -->
+            <h1>Made with Love by Raf</h1>
+        </section>
+        <section id="products" class="section-padding">
+            <h2>Our Breads</h2>
+            <div class="product-grid">
+                <!-- Product Item -->
+                <article class="product-item">
+                    <img src="classic-sourdough.jpg" alt="Classic Sourdough Bread">
+                    <h3>Classic Sourdough</h3>
+                    <p>Our classic sourdough bread is made with a blend of white and whole wheat flour for a traditional flavor.
+                    </p>
+                    <p class="price">$5.00</p>
+                    <button>Add to Cart</button>
+                </article>
+                <!-- Repeat for other products -->
+            </div>
+        </section>
+        
+        <section id="about" class="section-padding">
+            <h2>About Us</h2>
+            <p>We are a small bakery dedicated to the craft of sourdough bread making. Our bread is made with love by Raf, using
+                traditional techniques and organic ingredients.</p>
+        </section>
+        
+        <section id="contact" class="section-padding">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Raf's Artisanal Sourdough Bread</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
