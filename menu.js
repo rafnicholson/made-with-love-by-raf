@@ -6,9 +6,10 @@
 // Tips:
 // - Update `date` to today.
 // - Set `soldOut: true` on a loaf when it's gone.
+// - Set `hidden: true` on a loaf to keep it in the file but not show it today.
 // - `stripeUrl` is the Stripe Payment Link for that loaf.
 //   (See README.md → "Wiring Stripe" for how to create them.)
-// - You can have 1, 2, or 3 loaves. Keep it simple.
+// - You can have 1, 2, or 3 loaves visible. Keep it simple.
 //
 window.MENU = {
   date: "Tuesday, May 12",

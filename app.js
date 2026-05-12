@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("loaf-grid");
   grid.innerHTML = "";
 
-  menu.loaves.forEach((loaf) => {
+  menu.loaves.filter((loaf) => !loaf.hidden).forEach((loaf) => {
     const card = document.createElement("article");
     card.className = "loaf" + (loaf.soldOut ? " loaf--sold-out" : "");
 
