@@ -50,9 +50,9 @@ window.MENU = {
         "Garden rosemary and a generous shower of Parmigiano-Reggiano. Smells like a Sunday dinner.",
       price: "$10",
       image: "images/coverphoto.png",
-      stripeUrl: "https://buy.stripe.com/REPLACE_ME_ROSEMARY",
+      stripeUrl: "https://buy.stripe.com/cNi6oAdLCanN5S9fyUbjW02",
       soldOut: false,
-      hidden: true,
+      hidden: false,
     },
   ],
 };
