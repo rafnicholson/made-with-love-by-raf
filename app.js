@@ -2,8 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = window.MENU;
   if (!menu) return;
 
-  document.getElementById("today-date").textContent = menu.date;
+  document.getElementById("bake-date").textContent = menu.bakeDate;
   document.getElementById("pickup-window").textContent = menu.pickupWindow || "";
+
+  const leadtimeEl = document.getElementById("leadtime");
+  if (menu.orderBy && menu.orderBy.trim()) {
+    leadtimeEl.textContent = `Long-fermented for 24–36 hours · Order by ${menu.orderBy}`;
+    leadtimeEl.hidden = false;
+  }
 
   const noteEl = document.getElementById("today-note");
   if (menu.note && menu.note.trim()) {

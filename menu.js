@@ -1,19 +1,26 @@
 // ============================================================
-// EDIT THIS FILE EACH MORNING.
+// EDIT THIS FILE EACH BAKE CYCLE.
 // This is the only file you need to touch to update the menu.
 // ============================================================
 //
+// The bakery runs on a 24–36 hour cycle:
+//   Order by 8 PM (orderBy) -> leaven that night ->
+//   mix at dawn -> 12hr bulk ferment -> bake next morning ->
+//   pickup after noon on the bakeDate.
+//
 // Tips:
-// - Update `date` to today.
+// - Update `bakeDate` to the day loaves are ready for pickup.
+// - Update `orderBy` to the cutoff for accepting orders.
 // - Set `soldOut: true` on a loaf when it's gone.
-// - Set `hidden: true` on a loaf to keep it in the file but not show it today.
+// - Set `hidden: true` on a loaf to keep it in the file but not show this cycle.
 // - `stripeUrl` is the Stripe Payment Link for that loaf.
 //   (See README.md → "Wiring Stripe" for how to create them.)
 // - You can have 1, 2, or 3 loaves visible. Keep it simple.
 //
 window.MENU = {
-  date: "Tuesday, May 12",
-  pickupWindow: "Pickup window: 4–6 PM",
+  bakeDate: "Thursday, May 14",
+  orderBy: "Tuesday, May 12 at 8 PM",
+  pickupWindow: "Pickup after 12 PM",
   note: "", // Optional message at the top, e.g. "First bake of the week!"
 
   loaves: [
