@@ -22,7 +22,7 @@ window.MENU = {
         "A long-ferment country loaf with a crackly crust and an open, tangy crumb. The everyday everything.",
       price: "$8",
       image: "images/coverphoto.png", // Replace with a per-loaf photo when you have one
-      stripeUrl: "https://buy.stripe.com/REPLACE_ME_CLASSIC",
+      stripeUrl: "https://buy.stripe.com/aFacMY36YcvV2FX3QcbjW00",
       soldOut: false,
     },
     {
