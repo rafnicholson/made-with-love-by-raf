@@ -44,7 +44,7 @@ window.MENU = {
       description:
         "Sharp aged cheddar folded into the dough with fresh jalapeño. Spicy, melty, very make-a-sandwich-able.",
       price: "$10",
-      image: "images/coverphoto.png",
+      image: "images/jalapeno-cheddar.png",
       stripeUrl: "https://buy.stripe.com/eVq7sE4b2gMb80hcmIbjW01",
       soldOut: false,
       hidden: false,
@@ -54,7 +54,7 @@ window.MENU = {
       description:
         "Garden rosemary and a generous shower of Parmigiano-Reggiano. Smells like a Sunday dinner.",
       price: "$10",
-      image: "images/coverphoto.png",
+      image: "images/rosemary-parmesan.png",
       stripeUrl: "https://buy.stripe.com/cNi6oAdLCanN5S9fyUbjW02",
       soldOut: false,
       hidden: false,
