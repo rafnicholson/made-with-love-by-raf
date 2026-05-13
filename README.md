@@ -44,9 +44,11 @@ For each loaf:
 
 1. Go to [dashboard.stripe.com → Payment Links](https://dashboard.stripe.com/payment-links).
 2. Create a product (e.g. "Jalapeño Cheddar Loaf"), set price.
-3. **Limit the number of payments**: set to `3` (or whatever your daily cap is). Stripe will close the link once it hits the limit — built-in sold-out protection.
+3. **Adjustable quantity**: turn on, set Min `1`, Max `2`. Lets one customer grab a pair but stops anyone clearing the whole bake.
 4. Add a **custom field** asking "Pickup or delivery?" (two options). Add another asking for "Phone number" so you can text them.
 5. Copy the resulting `https://buy.stripe.com/...` URL into `menu.js`.
+
+**Do NOT use Stripe's "Limit number of payments" setting.** It counts checkouts, not loaves — so with adjustable quantity on, the math no longer reflects real inventory. Manage inventory through the `soldOut: true` flag in `menu.js` instead: when a flavor hits your daily cap, flip its flag and push. The card will gray out and the Reserve button becomes "Sold out."
 
 For $1 SF delivery: easiest to handle out-of-band — the success page / your follow-up text confirms whether they want pickup or delivery and you collect the $1 via Venmo / a separate $1 Stripe link. Later you can fold it into a single link with a shipping option.
 
