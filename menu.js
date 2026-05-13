@@ -1,32 +1,30 @@
 // ============================================================
-// EDIT THIS FILE EACH BAKE CYCLE.
-// This is the only file you need to touch to update the menu.
+// SHOP CONFIG.
+// No daily edits required — customers pick their own pickup
+// date at Stripe checkout. Touch this file only when something
+// actually changes (flavor swap, sold out, capacity full, etc.).
 // ============================================================
 //
-// The bakery runs on a 24–36 hour cycle:
-//   Order by 8 PM (orderBy) -> leaven that night ->
-//   mix at dawn -> 12hr bulk ferment -> bake next morning ->
-//   pickup after noon on the bakeDate.
+// The shop runs on a rolling schedule:
+//   Order by 6 PM today -> 48-hour fermentation ->
+//   pickup any time after 1 PM, two days later.
 //
 // Tips:
-// - Update `bakeDate` to the day loaves are ready for pickup.
-// - Update `orderBy` to the cutoff for accepting orders.
-// - Set `soldOut: true` on a loaf when it's gone.
-// - Set `hidden: true` on a loaf to keep it in the file but not show this cycle.
+// - `headline` / `subhead` are the persistent shop description.
+// - `status` shows in the upper-right (e.g. "Now taking orders",
+//   "Paused — back Monday").
+// - `note` is an optional banner above the loaves, e.g. "May 17
+//   is fully booked — earliest available is May 18."
+// - Set `soldOut: true` on a loaf when ingredients run out.
+// - Set `hidden: true` to remove a flavor without deleting it.
 // - `stripeUrl` is the Stripe Payment Link for that loaf.
 //   (See README.md → "Wiring Stripe" for how to create them.)
-// - You can have 1, 2, or 3 loaves visible. Keep it simple.
-// - `leadtime`: optional full-sentence override for the line under the
-//   header. If set, it replaces the default "Long-fermented for 24–36
-//   hours · Order by ___" sentence. Use for coming-soon / holidays /
-//   anything off the normal cycle.
 //
 window.MENU = {
-  bakeDate: "Coming Soon",
-  orderBy: "Tuesday, May 12 at 8 PM",
-  pickupWindow: "",
-  leadtime: "Still proofing the website — first bake date dropping soon, stay tuned.",
-  note: "", // Optional message at the top, e.g. "First bake of the week!"
+  headline: "Order ahead. Pickup in 2 days.",
+  subhead: "Order by 6 PM, ready any time after 1 PM, two days later.",
+  status: "Now taking orders",
+  note: "", // Optional banner above the loaves.
 
   loaves: [
     {

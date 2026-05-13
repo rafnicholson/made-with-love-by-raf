@@ -2,15 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = window.MENU;
   if (!menu) return;
 
-  document.getElementById("bake-date").textContent = menu.bakeDate;
-  document.getElementById("pickup-window").textContent = menu.pickupWindow || "";
+  document.getElementById("today-title").textContent = menu.headline || "";
+  document.getElementById("pickup-window").textContent = menu.status || "";
 
   const leadtimeEl = document.getElementById("leadtime");
-  if (menu.leadtime && menu.leadtime.trim()) {
-    leadtimeEl.textContent = menu.leadtime;
-    leadtimeEl.hidden = false;
-  } else if (menu.orderBy && menu.orderBy.trim()) {
-    leadtimeEl.textContent = `Long-fermented for 24–36 hours · Order by ${menu.orderBy}`;
+  if (menu.subhead && menu.subhead.trim()) {
+    leadtimeEl.textContent = menu.subhead;
     leadtimeEl.hidden = false;
   }
 
