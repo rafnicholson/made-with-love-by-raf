@@ -1,6 +1,6 @@
 # Made with Love by Raf
 
-A tiny one-page site for a home sourdough bakery in San Francisco. Pre-order a few loaves each day, pickup or $1 SF delivery.
+A tiny one-page site for a home sourdough bakery in San Francisco. Pre-order a few loaves each day, pickup or $2 SF delivery.
 
 **Live at:** <https://madewithlovebyraf.com>
 **Repo:** <https://github.com/rafnicholson/made-with-love-by-raf>
@@ -50,7 +50,7 @@ For each loaf:
 
 **Do NOT use Stripe's "Limit number of payments" setting.** It counts checkouts, not loaves — so with adjustable quantity on, the math no longer reflects real inventory. Manage inventory through the `soldOut: true` flag in `menu.js` instead: when a flavor hits your daily cap, flip its flag and push. The card will gray out and the Reserve button becomes "Sold out."
 
-For $1 SF delivery: easiest to handle out-of-band — the success page / your follow-up text confirms whether they want pickup or delivery and you collect the $1 via Venmo / a separate $1 Stripe link. Later you can fold it into a single link with a shipping option.
+For $2 SF delivery: easiest to handle out-of-band — the success page / your follow-up text confirms whether they want pickup or delivery and you collect the $2 via Venmo / a separate $2 Stripe link. Later you can fold it into a single link with a shipping option.
 
 ## Deploying
 
