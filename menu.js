@@ -36,7 +36,7 @@ window.MENU = {
       price: "$8",
       image: "images/coverphoto.jpg", // Replace with a per-loaf photo when you have one
       stripeUrl: "https://buy.stripe.com/aFacMY36YcvV2FX3QcbjW00",
-      soldOut: false,
+      soldOut: true,
       hidden: false,
     },
     {
