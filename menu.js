@@ -34,7 +34,7 @@ window.MENU = {
       description:
         "A long-ferment country loaf with a crackly crust and an open, tangy crumb. The everyday everything.",
       price: "$8",
-      image: "images/coverphoto.png", // Replace with a per-loaf photo when you have one
+      image: "images/coverphoto.jpg", // Replace with a per-loaf photo when you have one
       stripeUrl: "https://buy.stripe.com/aFacMY36YcvV2FX3QcbjW00",
       soldOut: false,
       hidden: false,
@@ -44,7 +44,7 @@ window.MENU = {
       description:
         "Sharp aged cheddar folded into the dough with fresh jalapeño. Spicy, melty, very make-a-sandwich-able.",
       price: "$10",
-      image: "images/jalapeno-cheddar.png",
+      image: "images/jalapeno-cheddar.jpg",
       stripeUrl: "https://buy.stripe.com/eVq7sE4b2gMb80hcmIbjW01",
       soldOut: false,
       hidden: false,
@@ -54,7 +54,7 @@ window.MENU = {
       description:
         "Garden rosemary and a generous shower of Parmigiano-Reggiano. Smells like a Sunday dinner.",
       price: "$10",
-      image: "images/rosemary-parmesan.png",
+      image: "images/rosemary-parmesan.jpg",
       stripeUrl: "https://buy.stripe.com/cNi6oAdLCanN5S9fyUbjW02",
       soldOut: false,
       hidden: false,
