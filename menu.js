@@ -21,7 +21,7 @@
 //   (See README.md → "Wiring Stripe" for how to create them.)
 //
 window.MENU = {
-  headline: "Order ahead. Pickup in 2 days.",
+  headline: "Now baking.",
   subhead: "Order by 6 PM, ready any time after 1 PM, two days later.",
   status: "Now taking orders",
   note: "", // Optional banner above the loaves.
