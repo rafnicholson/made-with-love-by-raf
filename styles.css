@@ -87,6 +87,27 @@ a { color: var(--accent); }
   font-size: 15px;
 }
 
+.status__dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 7px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+.status--open .status__dot {
+  background: #2d9d3c;
+  box-shadow: 0 0 0 3px rgba(45, 157, 60, 0.18);
+}
+
+.status--closed .status__dot {
+  background: #c93a3a;
+  box-shadow: 0 0 0 3px rgba(201, 58, 58, 0.18);
+}
+
 .today__leadtime {
   margin: 10px 0 0;
   color: var(--ink-soft);

@@ -3,7 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!menu) return;
 
   document.getElementById("today-title").textContent = menu.headline || "";
-  document.getElementById("pickup-window").textContent = menu.status || "";
+
+  const statusEl = document.getElementById("pickup-window");
+  statusEl.innerHTML = "";
+  const dot = document.createElement("span");
+  dot.className = "status__dot";
+  const label = document.createElement("span");
+  if (menu.isOpen) {
+    statusEl.className = "today__pickup status status--open";
+    label.textContent = "Open";
+  } else {
+    statusEl.className = "today__pickup status status--closed";
+    label.textContent =
+      (menu.closedLabel && menu.closedLabel.trim()) || "Closed for the day";
+  }
+  statusEl.append(dot, label);
 
   const leadtimeEl = document.getElementById("leadtime");
   if (menu.subhead && menu.subhead.trim()) {

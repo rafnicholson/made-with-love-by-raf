@@ -11,8 +11,10 @@
 //
 // Tips:
 // - `headline` / `subhead` are the persistent shop description.
-// - `status` shows in the upper-right (e.g. "Now taking orders",
-//   "Paused — back Monday").
+// - `isOpen: true` shows a green "Open" dot in the upper-right.
+//   Set to false to show a red "Closed for the day" dot.
+//   Optionally set `closedLabel` to override the closed text
+//   (e.g. "On vacation — back Monday").
 // - `note` is an optional banner above the loaves, e.g. "May 17
 //   is fully booked — earliest available is May 18."
 // - Set `soldOut: true` on a loaf when ingredients run out.
@@ -23,7 +25,8 @@
 window.MENU = {
   headline: "Now baking.",
   subhead: "Order by 6 PM, ready any time after 1 PM, two days later.",
-  status: "Now taking orders",
+  isOpen: true, // false = red "Closed for the day" dot
+  closedLabel: "", // optional override, e.g. "On vacation — back Monday"
   note: "", // Optional banner above the loaves.
 
   loaves: [
