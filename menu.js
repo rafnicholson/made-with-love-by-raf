@@ -26,7 +26,7 @@ window.MENU = {
   headline: "Now baking.",
   subhead: "Order by 6 PM, ready any time after 1 PM, two days later.",
   isOpen: true, // false = red "Closed for the day" dot
-  closedLabel: "", // optional override, e.g. "On vacation — back Monday"
+  closedLabel: "In Europe May 16–30 — back baking June 1!",
   note: "", // Optional banner above the loaves.
 
   loaves: [
