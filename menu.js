@@ -26,7 +26,7 @@ window.MENU = {
   headline: "Now baking.",
   subhead: "Order by 6 PM, ready any time after 1 PM, two days later.",
   isOpen: false, // false = red "Closed for the day" dot
-  closedLabel: "Site still proofing",
+  closedLabel: "Closed - Site still proofing",
   note: "", // Optional banner above the loaves.
 
   loaves: [
